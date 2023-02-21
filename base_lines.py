@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
-
+import pandas
 
 def rgb2gray(rgb):
     return np.round(np.dot(rgb[..., :3], [0.2989, 0.5870, 0.1140]))
