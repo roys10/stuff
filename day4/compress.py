@@ -10,9 +10,24 @@ def compress(to_comp):
         print(new_list)
 
 
-m = [[230, 230, 50], [50]]
-# compress([[230, 230, 50], [50]])
+m = np.array(np.array([[1, 2, 2], [3, 3, 4]]))
+m = list(m)
+print(m)
+
+# compress([[230, 230, 50], [50, ]])
+comped = []
 for i in m:
     # print(pd.Series(i).value_counts())
-    for j in i:
-        print(i.count(i[j]))
+    tmp = []
+
+    for j in range(0,len(i)):
+        value = i[j]
+        counter = i.count(i[j])
+        if not (f"{value}*{counter}" in tmp):
+            tmp.append(f"{value}*{counter}")
+
+
+    comped.append(tmp)
+
+
+print(comped)
